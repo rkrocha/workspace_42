@@ -1,0 +1,52 @@
+export FT=~/42cursus/libft/
+export SCR=~/.scripts
+
+alias ref="source $SCR/.bashrc && exec bash"
+
+alias cl="clear"
+alias cp="cp -iv"
+alias f="clear && la"
+alias grep="grep -i --color=always -v WORKSPACE"
+alias hg="history | grep"
+alias ls="ls -hN --color=always --group-directories-first"
+alias la="ls -lA --sort=extension"
+alias lag="la | grep"
+alias less="less -r"
+mkcd () { mkdir -pv -- "$@" && cd -P -- "$_" && pwd ; }
+alias mkd="mkdir -pv --"
+alias mv="mv -iv"
+alias rm="rm -Iv"
+alias rmd="rmdir -v"
+alias vc="code"
+
+alias d="pwd"
+alias ..="cd .. && pwd"
+alias ...="cd ../.. && pwd"
+alias .3="cd ../../.. && pwd"
+alias .4="cd ../../../.. && pwd"
+alias .5="cd ../../../../.. && pwd"
+alias 42="goto42"
+goto42 () { clear && cd $HOME/Documents/42cursus/ && la && read -e -p "Folder: " folder && cd ./$folder && clear && la ; }
+alias cdl="clear && cd && la"
+alias doc="clear && cd $HOME/Documents && la"
+alias dow="clear && cd $HOME/Downloads && la"
+alias ft="clear && cd $FT && la"
+alias scr="clear && cd $SCR && la"
+
+alias m="make"
+alias mc="make clean"
+alias mf="make fclean"
+alias mr="make re"
+alias mb="make bonus"
+alias md="make debug"
+alias mft="make -s -C $FT"
+alias norm="norminette"
+alias normc="norminette *.[ch]"
+alias py="python3"
+
+alias ga="git add"
+alias gc="git commit -m"
+alias gl="git log --oneline --decorate --graph"
+alias gp="git push"
+alias gr="git restore --staged"
+alias gs="git status"
